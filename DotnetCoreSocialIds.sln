@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCoreSocialIds", "DotnetCoreSocialIds\DotnetCoreSocialIds.csproj", "{9B2481D7-C5F1-428C-A8CE-D9923ACDD52D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfCourseThereIsATest", "OfCourseThereIsATest\OfCourseThereIsATest.csproj", "{A3C961E6-F3FD-4827-B7F1-D4589A6148A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9B2481D7-C5F1-428C-A8CE-D9923ACDD52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B2481D7-C5F1-428C-A8CE-D9923ACDD52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B2481D7-C5F1-428C-A8CE-D9923ACDD52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C961E6-F3FD-4827-B7F1-D4589A6148A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C961E6-F3FD-4827-B7F1-D4589A6148A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C961E6-F3FD-4827-B7F1-D4589A6148A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C961E6-F3FD-4827-B7F1-D4589A6148A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
