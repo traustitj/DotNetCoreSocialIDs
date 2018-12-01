@@ -80,7 +80,7 @@ namespace DotnetCoreSocialIds
 
             foreach (string date in allDates)
             {
-                for (int i = 1; i < 100; i++)
+                for (int i = 20; i < 100; i++)
                 {
                     var s = $"{date}-{ MakeTwoLetters(i)}";
                     allPossibles.Add(s);
