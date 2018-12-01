@@ -6,6 +6,31 @@ namespace DotnetCoreSocialIds
 {
     class Program
     {
+        public static async Task MainSyncParallel(string[] args)
+        {
+            var s = new SocialIDS();
+            var stopWatch = System.Diagnostics.Stopwatch.StartNew();
+            List<Task<List<string>>> tasks = new List<Task<List<String>>>();
+
+            List<List<string>> results = new List<List<string>>();
+
+
+            await Task.Run(() =>
+            {
+                Parallel.For(1900, 2000, i =>
+                {
+                    var x = s.GenerateAllWithChecksum(i);
+                    results.Add(x);
+                    Console.WriteLine($"Generated for year {i} total count {x.Count}");
+                });
+            });
+
+            stopWatch.Stop();
+            Console.WriteLine($"This took {stopWatch.ElapsedMilliseconds} ms");
+            Console.ReadKey();
+        }
+
+
         public static async Task MainAsyncParallel(string[] args)
         {
             var s = new SocialIDS();
@@ -53,7 +78,7 @@ namespace DotnetCoreSocialIds
 
         public static void Main(string[] args)
         {
-            MainAsyncParallel(args).GetAwaiter().GetResult();
+            MainSyncParallel(args).GetAwaiter().GetResult();
 
         }
     }
