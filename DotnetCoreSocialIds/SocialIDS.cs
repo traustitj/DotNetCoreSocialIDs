@@ -128,7 +128,10 @@ namespace DotnetCoreSocialIds
             foreach (string item in allPossibles)
             {
                 var checksum = GenerateChecksumOnIdNumber(item);
-                allPossiblesWithChecksum.Add($"{item}{checksum}{year / 100 % 10}");
+                if (checksum < 10) 
+                { 
+                    allPossiblesWithChecksum.Add($"{item}{checksum}{year / 100 % 10}");
+                }
             }
             //Console.WriteLine($"I just generated {allPossiblesWithChecksum.Count} social ids for year {year}");
             return allPossiblesWithChecksum;
